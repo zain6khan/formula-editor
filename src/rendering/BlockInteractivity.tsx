@@ -3,8 +3,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { reaction } from "mobx";
 import { observer } from "mobx-react-lite";
 
-import { computationStore } from "./computation";
-import { formulaStore } from "./store";
+import { computationStore } from "../computation";
+import { formulaStore } from "../store";
 
 declare global {
   interface Window {

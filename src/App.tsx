@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-import BlockInteractivity from "./BlockInteractivity";
 import { Debug } from "./Debug";
 import DirectFormulaRenderer from "./DirectFormulaRenderer";
 import { Editor } from "./Editor";
@@ -8,6 +7,7 @@ import { ElementPane } from "./ElementPane";
 import LLMFunction from "./LLMFunction";
 import { Menu } from "./Menu";
 import { Workspace } from "./Workspace";
+import BlockInteractivity from "./rendering/BlockInteractivity";
 
 function App() {
   const [showDirectRenderer, setShowDirectRenderer] = useState(false);

@@ -15,9 +15,9 @@ export interface FormulaVariable {
 }
 
 export interface FormulaDefinition {
-  formula: string;
+  expression: string;
+  id: string;
   variables: Record<string, FormulaVariable>;
-  name?: string;
   description?: string;
 }
 
@@ -29,7 +29,7 @@ export const createFormula = async (
 ): Promise<boolean> => {
   try {
     // Parse the formula to get an augmented formula object
-    const formula = deriveAugmentedFormula(formulaDef.formula);
+    const formula = deriveAugmentedFormula(formulaDef.expression);
     const canonicalFormula = canonicalizeFormula(formula);
 
     // Set the formula in the store
